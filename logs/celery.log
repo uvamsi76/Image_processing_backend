@@ -1,0 +1,48 @@
+ 
+ -------------- celery@Vamsi v5.4.0 (opalescent)
+--- ***** ----- 
+-- ******* ---- Linux-6.8.0-54-generic-x86_64-with-glibc2.39 2025-03-02 11:20:18
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         tasks:0x773b7fc34fe0
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     redis://localhost:6379/0
+- *** --- * --- .> concurrency: 8 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . src.celery_worker.add_numbers
+  . src.celery_worker.process_image
+
+[2025-03-02 11:20:18,675: WARNING/MainProcess] /home/vamsi/Desktop/Image_processing_backend/venv/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-03-02 11:20:18,680: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-03-02 11:20:18,680: WARNING/MainProcess] /home/vamsi/Desktop/Image_processing_backend/venv/lib/python3.12/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-03-02 11:20:18,681: INFO/MainProcess] mingle: searching for neighbors
+[2025-03-02 11:20:19,686: INFO/MainProcess] mingle: all alone
+[2025-03-02 11:20:19,692: INFO/MainProcess] celery@Vamsi ready.
+[2025-03-02 11:21:42,196: INFO/MainProcess] Task src.celery_worker.process_image[76248e5e-bc72-4404-90c0-1e2f3f878369] received
+[2025-03-02 11:21:42,197: WARNING/ForkPoolWorker-8] /home/vamsi/Desktop/Image_processing_backend/src/celery_worker.py:51: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  df=pd.read_json(df)
+
+[2025-03-02 11:22:34,887: WARNING/ForkPoolWorker-8]    S. No.  ...                               Processed Image Urls
+0       1  ...  ['https://files.catbox.moe/tvaucf.jpg', 'https...
+1       2  ...  ['https://files.catbox.moe/zngr8e.jpg', 'https...
+2       3  ...  ['https://files.catbox.moe/v1u03w.jpg', 'https...
+
+[3 rows x 4 columns]
+[2025-03-02 11:22:34,896: INFO/ForkPoolWorker-8] Task src.celery_worker.process_image[76248e5e-bc72-4404-90c0-1e2f3f878369] succeeded in 52.69966807899982s: {'S. No.': {0: 1, 1: 2, 2: 3}, 'Product Name': {0: 'SKU1', 1: 'SKU2', 2: 'SKU3'}, 'Input Image Urls': {0: '[\'https://drive.google.com/uc?export=download&id=1Euim_lg9U-bpzPCzSnctN1rXWooiV4EO\', \'https://drive.google.com/uc?export=download&id=13ow16cw2PSBlk99nuoFlCyqHJ9hWNgjN\', \'https://drive.google.com/uc?export=download&id=1LIjMTllHX9ztK2F3DWVaMNtCCrGet7_K\']', 1: '[\'https://drive.google.com/uc?export=download&id=1nYSl4WooBuaOMb7HOfq1HmRIFywtQulX\', \'https://drive.google.com/uc?export=download&id=1fH1mysu5YRKSn7ERjfvsmw2pGLMWY_Xx\', \'https://drive.google.com/uc?export=download&id=1DPdmJ0m5BwXO5N4zVuMKlbJMPMgBXEU_\']', 2: '[\'https://drive.google.com/uc?export=download&id=15_aFXWWrbUGzEnfO8TxdU0j4ub204ZsH\', \'https://drive.google.com/uc?export=download&id=1YJRu6M07SSXy4qeXofnWXH8KCZqlBoU8\', \'https://drive.google.com/uc?export=download&id=10_621W1uHlfG9eqpyo-NS0JMXMOVyunY\']'}, 'Processed Image Urls': {0: '[\'https://files.catbox.moe/tvaucf.jpg\', \'https://files.catbox.moe/t7ukta.jpg\',...', 1: '[\'htt...', ...}}
+[2025-03-02 11:22:49,989: WARNING/MainProcess] Got shutdown from remote
