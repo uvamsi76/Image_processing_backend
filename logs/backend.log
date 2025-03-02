@@ -1,20 +1,16 @@
 INFO:     Will watch for changes in these directories: ['/home/vamsi/Desktop/Image_processing_backend']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [3749652] using StatReload
-INFO:     Started server process [3749783]
+INFO:     Started reloader process [740194] using StatReload
+INFO:     Started server process [740322]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:57554 - "POST /upload HTTP/1.1" 307 Temporary Redirect
-INFO:     127.0.0.1:57554 - "POST /upload/ HTTP/1.1" 400 Bad Request
-INFO:     127.0.0.1:58956 - "POST /upload HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:36504 - "POST /upload HTTP/1.1" 307 Temporary Redirect
 /home/vamsi/Desktop/Image_processing_backend/src/utils.py:4: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
   df=pd.read_json(df)
 Index(['S. No.', 'Product Name', 'Input Image Urls'], dtype='object')
-INFO:     127.0.0.1:58956 - "POST /upload/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44592 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39406 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38000 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38000 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38000 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38000 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33208 - "GET /task/76248e5e-bc72-4404-90c0-1e2f3f878369 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36504 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37790 - "GET /task/b3319db7-75af-4301-83db-34f804135a7f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53832 - "GET /task/b3319db7-75af-4301-83db-34f804135a7f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60962 - "GET /task/b3319db7-75af-4301-83db-34f804135a7f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60962 - "GET /task/b3319db7-75af-4301-83db-34f804135a7f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35884 - "GET /task/b3319db7-75af-4301-83db-34f804135a7f HTTP/1.1" 200 OK
